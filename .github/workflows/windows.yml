@@ -101,7 +101,7 @@ jobs:
       working-directory: _build
       run: nmake test VERBOSE_FAILURE=yes TESTS=-test_fuzz* HARNESS_JOBS=4
     - uses: actions/upload-artifact@v3
-      if: ${{ matrix.os }} == "windos-2022"
+      if: ${{ matrix.os }} == "windows-2022"
       with:
         name: windows-build
-        path: _build
+        path: _build/apps
