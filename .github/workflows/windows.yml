@@ -104,4 +104,4 @@ jobs:
       if: ${{ matrix.os }} == "windows-2022"
       with:
         name: windows-build
-        path: _build/apps
+        path: _build/apps/openssl.exe
