@@ -11,6 +11,7 @@ on: [pull_request, push]
 
 jobs:
   shared:
+    if: ${{ false }}
     # Run a job for each of the specified target architectures:
     strategy:
       matrix:
@@ -53,6 +54,7 @@ jobs:
         nmake install DESTDIR=_dest
       working-directory: _build
   plain:
+    if: ${{ false }}
     strategy:
       matrix:
         os:
